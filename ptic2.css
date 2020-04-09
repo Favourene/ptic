@@ -213,4 +213,7 @@ span{
         height: 200px;
         padding-top: 20px;
     }
+    .top{
+        padding-bottom: 20px;
+    }
 }
