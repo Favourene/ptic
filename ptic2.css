@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(bg.svg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Barlow';
+}
+/*------------Navigation Bar------------------*/
+nav{
+    margin-top: 40px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    -top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    background-color: none ;
+}
+nav .logo{
+    flex: 1;
+    color: rgb(2, 37, 18);
+    text-shadow: 0 0 2px #000;
+    margin-left: 50px;
+}
+
+nav ul{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    margin-right: -240px;
+}
+@media screen and (max-width: 790px){
+    nav ul{
+        justify-content: space-evenly;
+    }
+}
+
+nav ul li{
+    list-style: none;
+    padding-right: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: hsl(230, 29%, 20%);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+#nov{
+    list-style: disc;
+    color: hsla(230, 29%, 20%, 0.247);
+}
+#nov a{
+    color: hsla(230, 29%, 20%, 0.397);
+}
+nav ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+nav .menu{
+    font-size: 2.5em;
+    display: none;
+}
+/*------SHRINKS THE NAV BAR FOR SMALLER SCREENS-------*/
+@media (max-width:790px){
+    nav ul{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        width: 100%;
+        background: white;
+        height: calc(50vh - 100px);
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    nav .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+    }
+    #times{
+        display: none;
+    }
+}
+@media (max-width:500px){
+    nav .logo{
+        margin-left: 10px;
+    }
+    .logo h1{
+        font-size: 1.5em;
+    }
+    #nov{
+        border-top: 1px solid black;
+        list-style: none;
+    }
+    nav ul{
+        border-radius: 20px;
+        width: 300px;
+        margin-right: 54px;
+
+    }
+    #contact .content{
+        padding: 20px;
+    }
+}
+input[type="checkbox"]{
+    display: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.mom{
+    padding-top: 150px;
+}
+.mom1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 0 100px; 
+}
+.sist-text {
+    width: 55%; 
+    padding-left: 60px;
+}
+h1{
+        font-size: 80px;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 0.5px 1px;
+        color:hsl(230, 29%, 20%);
+        margin-bottom: 20px;
+}
+span{
+    background: hsl(230, 29%, 20%);
+    letter-spacing: normal;
+    color: white;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+}
+.top {
+  font-size: 18px;
+  font-family: 'Barlow';
+  letter-spacing: 2px;
+  color:  hsl(231, 7%, 65%);
+}
+.sist-p{
+    color:  hsl(230, 34%, 64%);
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-family: 'Barlow' sans-serif;
+    margin-right: 80px; 
+    letter-spacing: 2px;
+}
+#sch{
+    background: hsl(0, 100%, 68%);
+    padding: 10px 10px 10px 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Barlow' sans-serif;
+
+}
+#has{
+    color:  hsl(231, 7%, 65%);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Barlow' sans-serif;
+}
+.sist-img-container {
+    width: 40%;
+    padding-top: 40px; 
+}
+.sist-img {
+    margin-top: -100px;
+    width: 150%;
+    height: 400px;
+    padding-right: 10px; 
+}
+@media screen and (max-width: 600px){
+    .mom1{
+        flex-wrap: wrap-reverse;
+        padding-top: 0; 
+    }
+    .sist-img-container {
+        margin-bottom: 70px; 
+    }
+    
+    h1 {
+        font-size: 50px;
+        text-align: left; }
+    
+    .sist-p {
+        margin: 0;
+        text-align: left; 
+    }
+    #has{
+        margin-top: 30px;
+    }
+    .sist-text,.sist-img-container{
+        width: 100%;
+        padding-left: 10px;
+    }
+    .sist-img{
+        width: 90%;
+        height: 200px;
+        padding-top: 20px;
+    }
+}
